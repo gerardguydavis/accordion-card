@@ -5,6 +5,8 @@ body {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    font-size: 12px;
+    color: hsl(238, 29%, 16%);
 }
 
 .content-wrapper {
@@ -12,11 +14,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
+    width: 375px;
 }
 
 .faq-wrapper {
     display: flex;
-    width: 375px;
+    width: 320px;
     justify-content: center;
     flex-flow: row wrap;
     background-color: #fff;
@@ -85,4 +88,6 @@ h1 {
 
 .attribution {
     width: 100%;
+    bottom: 10px;
+    position: absolute;
 }
