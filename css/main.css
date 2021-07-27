@@ -89,6 +89,15 @@ article {
     cursor: pointer;
 }
 
+
+span {
+    color: hsl(240, 6%, 50%);
+    padding: 20px 0 0;
+    width: 100%;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
 .unopen {
     font-weight: normal;
 }
@@ -113,13 +122,6 @@ article {
 .open svg {
     transform: rotate(180deg);
     transition: .2s;
-}
-
-span {
-    color: hsl(240, 6%, 50%);
-    padding: 20px 0 0;
-    width: 100%;
-    font-weight: normal;
 }
 
 
