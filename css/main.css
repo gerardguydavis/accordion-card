@@ -182,7 +182,7 @@ span {
     #block-illustration {
         position: fixed;
         top: 320px;
-        left: 408px;
+        margin-left: 100px;
     }
 
     .faqs {
