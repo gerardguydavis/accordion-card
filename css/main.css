@@ -129,16 +129,6 @@ span {
     }
   }
 
-  @keyframes slide-up {
-    from {
-      padding-top: 10px;
-    }
-
-  to{
-      padding-top: 0;
-    }
-  }
-
 @media only screen and (min-width: 1400px) {
 
     .faq-wrapper {
