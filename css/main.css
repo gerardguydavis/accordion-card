@@ -144,7 +144,6 @@ span {
     .faq-wrapper {
         width: 920px;
         padding: 40px 0;
-        max-height: 510px;
         margin-top: 130px;
         transition: .2s;
         flex-flow: row wrap;
@@ -182,7 +181,7 @@ span {
     #block-illustration {
         position: fixed;
         top: 320px;
-        margin-left: 100px;
+        margin-left: 92px;
     }
 
     .faqs {
