@@ -9,28 +9,19 @@ body {
     color: hsl(238, 29%, 16%);
 }
 
-.content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    width: 375px;
-}
-
 .faq-wrapper {
     display: flex;
-    width: 320px;
+    width: 325px;
     justify-content: center;
     flex-flow: row wrap;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0px 30px 20px -10px rgba(5, 5, 5, .2);
     margin: 150px 0 20px;
+    transition: .2s;
 }
 
-#desktop-woman,
-#desktop-bg,
-#box-illustration {
+.desktop-illustration-wrapper {
     display: none;
 }
 
@@ -39,6 +30,7 @@ body {
     justify-content: center;
     flex-flow: column;
     margin: auto;
+    transition: .2s;
 }
 
 #mobile-bg {
@@ -51,7 +43,7 @@ body {
 #mobile-woman {
     display: flex;
     justify-content: center;
-    z-index: 10;
+    z-index: 2;
     margin-top: -110px;
     margin-left: -26px;
 }
@@ -69,20 +61,15 @@ h1 {
     font-size: 2.5em;
 }
 
-article {
-    padding: 20px 0;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    margin-bottom: 0;
-    border-bottom: solid 1px hsl(240, 5%, 91%);
-}
-
 .question {
     display: flex;
+    flex-basis: 100%;
     justify-content: space-between;
     flex-flow: row wrap;
-    flex-basis: 100%;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+    border-bottom: solid 1px hsl(240, 5%, 91%);
 }
 
 .question:hover {
@@ -92,10 +79,12 @@ article {
 
 span {
     color: hsl(240, 6%, 50%);
-    padding: 20px 0 0;
-    width: 100%;
+    padding: 10px 0 0;
+    width: 92%;
     font-weight: normal;
     line-height: 1.5em;
+    animation-name: slide-down;
+    animation-duration: .3s;
 }
 
 .unopen {
@@ -127,6 +116,81 @@ span {
 
 .attribution {
     width: 100%;
-    bottom: 10px;
-    position: absolute;
+    margin-top: 20px;
+}
+
+@keyframes slide-down {
+    from {
+      padding-top: 0;
+    }
+
+  to{
+      padding-top: 10px;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      padding-top: 10px;
+    }
+
+  to{
+      padding-top: 0;
+    }
+  }
+
+@media only screen and (min-width: 1400px) {
+
+    .faq-wrapper {
+        width: 920px;
+        padding: 40px 0;
+        max-height: 510px;
+        margin-top: 130px;
+        transition: .2s;
+        flex-flow: row wrap;
+        overflow: clip;
+        justify-content: space-between;
+    }
+
+    .mobile-illustration {
+        display: none;
+    }
+
+    .desktop-illustration-wrapper {
+        display: block;
+        width: 40%;
+    }
+
+    .desktop-illustration {
+        position: relative;
+        left: -50%;
+    }
+    
+    #desktop-bg {
+        position: absolute;
+        top: -340px;
+        left: -100%;
+        z-index: 0;
+    }
+
+    #desktop-woman {
+        position: relative;
+        top: 15px;
+        left: 34%;
+    }
+
+    #block-illustration {
+        position: fixed;
+        top: 320px;
+        left: 408px;
+    }
+
+    .faqs {
+        flex-basis: 40%;
+        padding: 15px 90px 45px;
+    }
+
+    h1 {
+        text-align: left;
+    }
 }
